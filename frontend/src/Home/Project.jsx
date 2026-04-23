@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { FaSpinner } from 'react-icons/fa'
+import { BACKEND_URL } from '../utils/Utils'
 
 const Project = () => {
   const [project, setProject] = useState([])
@@ -8,7 +9,7 @@ const Project = () => {
 
   const fetchProject = async () => {
     try {
-      const { data } = await axios.get("http://localhost:4000/api/all-projects", { withCredentials: true })
+      const { data } = await axios.get(`${BACKEND_URL}/all-projects`, { withCredentials: true })
       console.log(data.project)
       setProject(data.project)
     } catch (error) {

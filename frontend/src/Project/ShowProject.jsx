@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { FaSpinner } from 'react-icons/fa'
 import { Link, useParams } from 'react-router-dom'
+import { BACKEND_URL } from '../utils/Utils'
 
 const ShowProject = () => {
     const [project, setProject] = useState([])
@@ -10,7 +11,7 @@ const ShowProject = () => {
 
     const handleDelete = async (id) => {
         try {
-            const { data } = await axios.delete(`http://localhost:4000/api/project-delete/${id}`, { withCredentials: true })
+            const { data } = await axios.delete(`${BACKEND_URL}/project-delete/${id}`, { withCredentials: true })
             toast.success(data.message)
             setProject((prev) => prev.filter((item) => item._id !== id))
         } catch (error) {
@@ -20,7 +21,7 @@ const ShowProject = () => {
 
     const fetchProject = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/all-projects", { withCredentials: true })
+            const { data } = await axios.get(`${BACKEND_URL}/all-projects`, { withCredentials: true })
             console.log(data.project)
             setProject(data.project)
         } catch (error) {

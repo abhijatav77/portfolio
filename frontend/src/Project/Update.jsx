@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { useParams } from 'react-router-dom'
+import { BACKEND_URL } from '../utils/Utils'
 
 const Update = () => {
     const [title, setTitle] = useState("")
@@ -16,8 +17,7 @@ const Update = () => {
 
    const fetchProject = async() => {
     try {
-        const {data} = await axios.get(`http://localhost:4000/api/single-projects/${id}`, {withCredentials: true})
-        console.log("dataaaaaaaaaaaa",data)
+        const {data} = await axios.get(`${BACKEND_URL}/single-projects/${id}`, {withCredentials: true})
         setTitle(data.project.title)
         setDescription(data.project.description)
         setTools(data.project.tools)

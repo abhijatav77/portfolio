@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import toast from "react-hot-toast"
+import { BACKEND_URL } from "../utils/Utils"
 
 const Contact = () => {
   const [name, setName] = useState("")
@@ -11,8 +12,7 @@ const Contact = () => {
   const handleForm = async(e) => {
     e.preventDefault()
     try {
-      const {data} = await axios.post('http://localhost:4000/api/contact',{name, email, subject, messages}, {withCredentials: true})
-      console.log("dataaaaaaaaa", data)
+      const {data} = await axios.post(`${BACKEND_URL}/api/contact`,{name, email, subject, messages}, {withCredentials: true})
       toast.success(data.message)
     } catch (error) {
       console.log(error.message)

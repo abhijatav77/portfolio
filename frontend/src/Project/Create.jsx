@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
+import { BACKEND_URL } from '../utils/Utils'
 
 const Create = () => {
     const [title, setTitle] = useState("")
@@ -32,7 +33,7 @@ const Create = () => {
             formData.append("github", github)
             formData.append("live", live)
             formData.append("projectImage", projectImage)
-            const {data} = await axios.post('http://localhost:4000/api/project-upload', formData, {withCredentials: true})
+            const {data} = await axios.post(`${BACKEND_URL}/project-upload`, formData, {withCredentials: true})
             toast.success(data.message)
             
             setTitle(title)
