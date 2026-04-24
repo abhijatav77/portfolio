@@ -36,7 +36,7 @@ const ShowProject = () => {
     }, [])
 
     return (
-        <div>
+        <div className='min-h-screen'>
             <div className='max-w-7xl mx-auto px-10 pt-20'>
                 <div className='flex items-center justify-center flex-col'>
                     <h1 className='text-3xl font-bold text-white'>

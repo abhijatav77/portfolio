@@ -6,6 +6,7 @@ import Create from './Project/Create'
 import NotFound from './pages/NotFound'
 import ShowProject from './Project/ShowProject'
 import Update from './Project/Update'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/project/dashboard' element={<Dashboard />} />
         <Route path='/project/creation' element={<Create />} />
         <Route path='/project/show' element={<ShowProject />} />
         <Route path='/project/update/:id' element={<Update />} />

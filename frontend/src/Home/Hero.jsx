@@ -20,7 +20,7 @@ const Hero = () => {
             </a>
             </div>
           </div>
-          <div className='md:w-[40%] w-full flex justify-center'>
+          <div className='md:w-[40%] w-full flex justify-center mt-20'>
             <div className='relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden'>
               <div
                 className='absolute inset-0 border-4 border-dashed border-white rounded-full animate-spin'

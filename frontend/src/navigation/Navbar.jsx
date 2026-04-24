@@ -1,14 +1,16 @@
-import React from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaGithub, FaHamburger, FaLinkedin } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   const handleScroll = (id) => {
     const section = document.getElementById(id)
     section?.scrollIntoView({ behavior: 'smooth' })
   }
   return (
-    <nav className='fixed top-0 left-0 w-full backdrop-blur-2xl z-10 bg-[#050414]'>
+    <nav className='fixed top-0 left-0 w-full backdrop-blur-2xl z-10'>
       <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
         <Link to={"/"} className='text-white font-semibold text-xl'>
           <span className='text-purple-600 font-bold text-2xl'>{"<"}</span>
@@ -36,7 +38,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className='flex gap-2 text-gray-400'>
+        <div className='hidden md:flex gap-2 text-gray-400'>
           <a href={'https://github.com/abhijatav77'} target='_blank'>
             <FaGithub size={23} className='cursor-pointer hover:text-white duration-300' />
           </a>
@@ -44,7 +46,23 @@ const Navbar = () => {
             <FaLinkedin size={23} className='cursor-pointer hover:text-white duration-300' />
           </a>
         </div>
+        <div className='md:hidden'>
+          <FaHamburger
+            className='text-white cursor-pointer'
+            onClick={() => setIsOpen(!isOpen)}
+          />
+        </div>
       </div>
+      {isOpen && (
+        <ul className='md:hidden absolute right-2 p-5 rounded-md text-center gap-4 bg-gray-300 text-black font-semibold space-y-4'>
+          <li onClick={() => handleScroll("home")} className='border-b w-full pb-2'>Home</li>
+          <li onClick={() => handleScroll("skill")} className='border-b w-full pb-2'>Skill</li>
+          <li onClick={() => handleScroll("project")} className='border-b w-full pb-2'>Project</li>
+          <li onClick={() => handleScroll("education")} className='border-b w-full pb-2'>Education</li>
+          <li onClick={() => handleScroll("contact")} className='border-b w-full pb-2'>Contact</li>
+          <Link to={"/project/dashboard"} className='bg-blue-600 text-white px-4 py-1 rounded-md'>Login</Link>
+        </ul>
+      )}
     </nav>
   )
 }
