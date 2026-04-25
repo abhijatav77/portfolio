@@ -9,11 +9,15 @@ const Contact = () => {
   const [subject, setSubject] = useState("")
   const [messages, setMessages] = useState("")
 
-  const handleForm = async(e) => {
+  const handleForm = async (e) => {
     e.preventDefault()
     try {
-      const {data} = await axios.post(`${BACKEND_URL}/contact`,{name, email, subject, messages}, {withCredentials: true})
+      const { data } = await axios.post(`${BACKEND_URL}/contact`, { name, email, subject, messages }, { withCredentials: true })
       toast.success(data.message)
+      setName("")
+      setEmail("")
+      setSubject("")
+      setMessages("")
     } catch (error) {
       console.log(error.message)
       toast.error(error?.response?.data?.message || "Something went wrong")
