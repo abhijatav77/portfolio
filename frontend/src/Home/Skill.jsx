@@ -25,7 +25,7 @@ const Skill = () => {
                         SKILLS
                     </h1>
                     <div className='w-20 h-1 bg-purple-700 mt-2'></div>
-                    <p className='text-gray-300 font-medium text-xl text-center mt-4'>A collection of my technical skills and expertise honed through various projects and <br />experiences</p>
+                    <p className='text-gray-300 font-medium text-xl text-center mt-4'>Technologies and tools I use to design, develop, and deploy applications.</p>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10'>
                     <div className='bg-gray-900 backdrop-blur-md px-6 py-8 rounded-md border border-white/20 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]'>

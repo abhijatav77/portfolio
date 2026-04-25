@@ -5,6 +5,8 @@ import fileUpload from 'express-fileupload'
 import 'dotenv/config'
 import router from './routes/projectRoute.js'
 import cors from 'cors'
+import adminRouter from './routes/adminRoute.js'
+import cookieParser from 'cookie-parser'
 
 
 const app = express()
@@ -12,8 +14,9 @@ const app = express()
 const PORT = process.env.PORT || 4000
 
 app.use(express.json())
+app.use(cookieParser())
 app.use(cors({
-    origin: process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
     credentials: true
 }))
 app.use(fileUpload({
@@ -27,6 +30,7 @@ cloudinary.config({
 })
 
 app.use('/api', router)
+app.use('/api/admin', adminRouter)
 
 main()
 .then(() => {

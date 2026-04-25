@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { FaGithub, FaHamburger, FaLinkedin } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { BACKEND_URL } from '../utils/Utils'
+import toast from 'react-hot-toast'
+import { useAuth } from '../context/AuthProvider'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  const {isAuthenticated, logout, loading} = useAuth()
 
   const handleScroll = (id) => {
     const section = document.getElementById(id)
@@ -38,13 +44,18 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className='hidden md:flex gap-2 text-gray-400'>
+        <div className='hidden md:flex gap-2 text-gray-400 items-center'>
           <a href={'https://github.com/abhijatav77'} target='_blank'>
             <FaGithub size={23} className='cursor-pointer hover:text-white duration-300' />
           </a>
           <a href={'https://www.linkedin.com/in/abhi-jatav77'} target='_blank'>
             <FaLinkedin size={23} className='cursor-pointer hover:text-white duration-300' />
           </a>
+          {!isAuthenticated ? (
+            <Link to={"/project/login"} className='bg-blue-600 hover:bg-blue-700 duration-300 text-white px-4 py-1 rounded-md'>Login</Link>
+          ) : (
+            <button onClick={logout} className='bg-red-600 hover:bg-red-700 duration-300 text-white px-4 py-1 rounded-md'>Logout</button>
+          )}
         </div>
         <div className='md:hidden'>
           <FaHamburger
@@ -60,7 +71,12 @@ const Navbar = () => {
           <li onClick={() => handleScroll("project")} className='border-b w-full pb-2'>Project</li>
           <li onClick={() => handleScroll("education")} className='border-b w-full pb-2'>Education</li>
           <li onClick={() => handleScroll("contact")} className='border-b w-full pb-2'>Contact</li>
-          <Link to={"/project/dashboard"} className='bg-blue-600 text-white px-4 py-1 rounded-md'>Login</Link>
+
+          {!isAuthenticated ? (
+            <Link to={"/project/login"} className='bg-blue-600 text-white px-4 py-1 rounded-md'>Login</Link>
+          ) : (
+            <button onClick={logout} className='bg-red-600 text-white px-4 py-1 rounded-md'>Logout</button>
+          )}
         </ul>
       )}
     </nav>

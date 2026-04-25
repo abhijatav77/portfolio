@@ -2,26 +2,10 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { FaSpinner } from 'react-icons/fa'
 import { BACKEND_URL } from '../utils/Utils'
+import { useAuth } from '../context/AuthProvider'
 
 const Project = () => {
-  const [project, setProject] = useState([])
-  const [loading, setLoading] = useState(true)
-
-  const fetchProject = async () => {
-    try {
-      const { data } = await axios.get(`${BACKEND_URL}/all-projects`, { withCredentials: true })
-      console.log(data.project)
-      setProject(data.project)
-    } catch (error) {
-      console.log(error.message)
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  useEffect(() => {
-    fetchProject()
-  }, [])
+  const {loading, project} = useAuth()
 
   return (
     <div>

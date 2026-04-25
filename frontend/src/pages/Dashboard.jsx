@@ -13,7 +13,7 @@ const Dashboard = () => {
             PROJECT
           </h1>
           <div className='w-20 h-1 bg-purple-600 mt-2'></div>
-          <p className='text-gray-300 font-medium text-xl text-center mt-4'>I’d love to hear from you—reach out for any opportunities or questions!</p>
+          <p className='text-gray-300 font-medium text-xl text-center mt-4'>Start building something amazing or dive into your existing projects.</p>
         </div>
         <div className='mt-10'>
             <div className='flex justify-center items-center flex-wrap gap-5'>
