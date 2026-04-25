@@ -66,7 +66,8 @@ export const login = async (req, res) => {
         res.cookie("token", token, {
             httpOnly: true,
             secure: true,
-            sameSite: 'strict'
+            sameSite: 'none',
+            path: "/"
         })
 
         return res.status(200).json({
@@ -88,7 +89,8 @@ export const logout = async (req, res) => {
         res.cookie("token", "", {
             httpOnly: true,
             secure: true,
-            sameSite: 'none',
+            sameSite: "none",
+            path: "/",
             expires: new Date(0)
         })
 
@@ -104,7 +106,7 @@ export const logout = async (req, res) => {
     }
 }
 
-export const getMe = async(req, res) => {
+export const getMe = async (req, res) => {
     try {
         const user = await Admin.findById(req.user.id)
         return res.status(200).json({
