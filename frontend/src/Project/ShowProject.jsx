@@ -43,7 +43,9 @@ const ShowProject = () => {
                         PROJECTS
                     </h1>
                     <div className='w-20 h-1 bg-purple-600 mt-2'></div>
-                    <p className='text-gray-300 font-medium text-xl text-center mt-4'>A showcase of the projects I have worked on</p>
+                    <p className='text-gray-300 font-medium text-xl text-center mt-4'>
+                        Browse and manage all your projects, including updating details or removing them.
+                    </p>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-15 place-items-center'>
                     {loading ? (
