@@ -10,14 +10,16 @@ const Hero = () => {
             <h1 className='text-white text-7xl font-bold'>
               Hi, I am <br />Abhi Jatav
             </h1>
-            <p className='text-gray-300 mt-10 text-xl'>I am a full-stack developer with over 1 year of experience in building scalable web applications. Skilled in both front-end and back-end development, I specialize in the MERN stack and modern technologies to create efficient, user-focused solutions.</p>
+            <p className='text-gray-300 mt-10 text-xl'>
+              I am a full-stack developer specializing in the MERN stack, currently pursuing a Bachelor of Computer Applications (BCA). I have hands-on experience building scalable web applications, including a dynamic personal portfolio and a full-featured blog platform with authentication and CRUD functionality. Skilled in React.js, Node.js, Express.js, and MongoDB, I focus on creating responsive, user-friendly interfaces and efficient backend systems using modern web technologies.
+            </p>
             <div className='mt-10 md:w-fit text-white bg-linear-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold text-2xl shadow-md hover:scale-[1.03] duration-300 hover:bg-linear-to-r hover:from-indigo-700 hover:to-purple-700' >
-            <a
-              href={cv} 
-              target='_blank'
-            >
-              Download Resume
-            </a>
+              <a
+                href={cv}
+                target='_blank'
+              >
+                Download Resume
+              </a>
             </div>
           </div>
           <div className='md:w-[40%] w-full flex justify-center mt-20'>
