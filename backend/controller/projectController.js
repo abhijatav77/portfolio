@@ -74,13 +74,73 @@ export const projectUpload = async (req, res) => {
     }
 }
 
-export const updateProject = async(req, res) => {
+export const updateProject = async (req, res) => {
     try {
-        
+        const { id } = req.params;
+
+        let project = await Project.findById(id);
+
+        if (!project) {
+            return res.status(404).json({
+                success: false,
+                message: "Project not found",
+            });
+        }
+
+        const { title, description, tools, github, live } = req.body;
+
+        const updatedData = {
+            title,
+            description,
+            tools: tools ? tools.split(",") : project.tools,
+            github,
+            live,
+        };
+
+        if (req.files && req.files.projectImage) {
+            const { projectImage } = req.files;
+
+            const allowedFormat = ["image/jpeg", "image/png"];
+            if (!allowedFormat.includes(projectImage.mimetype)) {
+                return res.status(400).json({
+                    success: false,
+                    message: "Invalid format. Only jpg or png allowed",
+                });
+            }
+
+            if (project.projectImage?.public_id) {
+                await cloudinary.uploader.destroy(project.projectImage.public_id);
+            }
+
+            const result = await cloudinary.uploader.upload(
+                projectImage.tempFilePath,
+                {
+                    folder: "mern_uploads",
+                }
+            );
+
+            updatedData.projectImage = {
+                public_id: result.public_id,
+                url: result.secure_url,
+            };
+        }
+
+        project = await Project.findByIdAndUpdate(id, updatedData, {
+            new: true,
+        });
+
+        return res.status(200).json({
+            success: true,
+            message: "Project updated successfully",
+            project,
+        });
     } catch (error) {
-        
+        return res.status(500).json({
+            success: false,
+            message: error.message,
+        });
     }
-}
+};
 
 export const getProject = async (req, res) => {
     try {
@@ -96,9 +156,9 @@ export const getProject = async (req, res) => {
     }
 }
 
-export const singleProject = async(req, res) => {
+export const singleProject = async (req, res) => {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
         const project = await Project.findById(id)
 
         return res.status(200).json({
@@ -113,10 +173,10 @@ export const singleProject = async(req, res) => {
     }
 }
 
-export const deleteProject = async(req, res) => {
+export const deleteProject = async (req, res) => {
     try {
-        const {id} = req.params;
-        const project = await Project.findByIdAndDelete(id, {new: true})
+        const { id } = req.params;
+        const project = await Project.findByIdAndDelete(id, { new: true })
 
         return res.status(200).json({
             success: true,

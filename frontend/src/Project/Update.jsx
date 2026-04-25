@@ -45,7 +45,7 @@ const Update = () => {
       if (projectImage instanceof File) {
         formData.append("projectImage", projectImage)
       }
-      const { data } = await axios.put(`${BACKEND_URL}/project-upload${id}`, formData, { withCredentials: true })
+      const { data } = await axios.put(`${BACKEND_URL}/project-update/${id}`, formData, { withCredentials: true })
       toast.success(data.message)
     } catch (error) {
       toast.error(error.response.data.message)
