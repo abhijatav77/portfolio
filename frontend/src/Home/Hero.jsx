@@ -1,5 +1,5 @@
 import cv from '../assets/cv.pdf'
-import abhi from '../assets/01.png'
+import abhi from '../assets/abhi.jpeg'
 
 const Hero = () => {
   return (
