@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { BACKEND_URL } from '../utils/Utils'
 
 const Update = () => {
@@ -12,6 +12,8 @@ const Update = () => {
   const [live, setLive] = useState("")
   const [projectImage, setProjectImage] = useState(null)
   const [projectImagePreview, setProjectImagePreview] = useState()
+
+  const navigate = useNavigate()
 
   const { id } = useParams()
 
@@ -47,6 +49,7 @@ const Update = () => {
       }
       const { data } = await axios.put(`${BACKEND_URL}/project-update/${id}`, formData, { withCredentials: true })
       toast.success(data.message)
+      navigate("/project/show")
     } catch (error) {
       toast.error(error.response.data.message)
     }
