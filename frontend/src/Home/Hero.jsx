@@ -25,7 +25,7 @@ const Hero = () => {
                   Download Resume
                 </a>
               </div>
-              {!isAuthenticated && (
+              {isAuthenticated && (
                 <Link to={"/project/show"} className='mt-5 md:w-fit text-white bg-linear-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold text-xl shadow-md hover:scale-[1.03] duration-300 hover:bg-linear-to-r hover:from-indigo-700 hover:to-purple-700'>
                   Dashboard
                 </Link>
