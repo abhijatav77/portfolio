@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import { BACKEND_URL } from '../utils/Utils'
+import { useNavigate } from 'react-router-dom'
 
 const Create = () => {
   const [title, setTitle] = useState("")
@@ -11,6 +12,8 @@ const Create = () => {
   const [live, setLive] = useState("")
   const [projectImage, setProjectImage] = useState(null)
   const [projectImagePreview, setProjectImagePreview] = useState()
+
+  const navigate = useNavigate()
 
   const changeImageHandler = (e) => {
     console.log(e.target.files[0])
@@ -35,7 +38,7 @@ const Create = () => {
       formData.append("projectImage", projectImage)
       const { data } = await axios.post(`${BACKEND_URL}/project-upload`, formData, { withCredentials: true })
       toast.success(data.message)
-
+      navigate('/project/dashboard')
       setTitle(title)
       setDescription(description)
       setTools(tools)
