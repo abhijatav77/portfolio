@@ -18,7 +18,7 @@ const Project = () => {
           <div className='w-20 h-1 bg-purple-600 mt-2'></div>
           <p className='text-gray-300 font-medium text-xl text-center mt-4'>A showcase of the projects I have worked on</p>
         </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 mt-15 place-items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-15 place-items-center'>
           {loading ? (
              <div className="col-span-full flex items-center justify-center h-40 gap-2">
               <FaSpinner className='text-white animate-spin text-2xl' />
