@@ -27,7 +27,7 @@ const Project = () => {
           ) : project && project.length > 0 ? (
             project.map((element) => (
               <div key={element._id} to={'https://blog-app-major.vercel.app'}
-                className='bg-gray-900 border border-white/20 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] rounded-md hover:-translate-y-0.5 duration-200'
+                className='bg-gray-900 border border-white/10 hover:border-white/20 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] rounded-md hover:-translate-y-0.5 duration-200'
               >
                 <div>
                   <div className='m-4'>

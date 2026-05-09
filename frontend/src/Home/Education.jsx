@@ -16,7 +16,7 @@ const Education = () => {
         <div className="relative max-w-6xl mx-auto">
           <div className='absolute left-1/2 top-0 h-full w-0.5 bg-white/60 -translate-x-1/2'></div>
           <div className='relative flex w-full mb-20 justify-start'>
-            <div className='w-full sm:w-[46%] bg-gray-900 border border-white/70 rounded-2xl p-6 shadow-[0_0_25px_rgba(130,69,236,0.35)]'>
+            <div className='w-full sm:w-[46%] bg-gray-900 border border-white/30 hover:border-white/50 rounded-2xl p-6 shadow-[0_0_25px_rgba(130,69,236,0.35)]'>
               <div className="flex items-center gap-5">
                 <div className='w-50 h-16 bg-white rounded-md overflow-hidden'>
                   <img src={msu} alt="photo" className='w-full h-full bg-white object-cover' />
@@ -37,7 +37,7 @@ const Education = () => {
             </div>
           </div>
           <div className='relative flex w-full mb-20 justify-end'>
-            <div className='w-full sm:w-[46%] bg-gray-900 border border-white/70 rounded-2xl p-6 shadow-[0_0_25px_rgba(130,69,236,0.35)]'>
+            <div className='w-full sm:w-[46%] bg-gray-900 border border-white/30 hover:border-white/50 rounded-2xl p-6 shadow-[0_0_25px_rgba(130,69,236,0.35)]'>
               <div className="flex items-center gap-5">
                 <div className='w-18 h-15 bg-white rounded-md overflow-hidden'>
                   <img src={rslc} alt="photo" className='w-full h-full bg-white object-cover' />
@@ -58,7 +58,7 @@ const Education = () => {
             </div>
           </div>
           <div className='relative flex w-full mb-20 justify-start'>
-            <div className='w-full sm:w-[46%] bg-gray-900 border border-white/70 rounded-2xl p-6 shadow-[0_0_25px_rgba(130,69,236,0.35)]'>
+            <div className='w-full sm:w-[46%] bg-gray-900 border border-white/30 hover:border-white/50 rounded-2xl p-6 shadow-[0_0_25px_rgba(130,69,236,0.35)]'>
               <div className="flex items-center gap-5">
                 <div className='w-18 h-15 bg-white rounded-md overflow-hidden'>
                   <img src={rslc} alt="photo" className='w-full h-full bg-white object-cover' />

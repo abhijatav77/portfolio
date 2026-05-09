@@ -34,7 +34,7 @@ const Contact = () => {
           <p className='text-gray-300 font-medium text-xl text-center mt-4'>Have a question or want to work together? Drop me a message!</p>
         </div>
         <div className='flex items-center justify-center mt-10'>
-          <form onSubmit={handleForm} className='bg-gray-900 w-full max-w-md backdrop-blur-md px-6 py-8 rounded-md border border-white/20 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]'>
+          <form onSubmit={handleForm} className='bg-gray-900 w-full max-w-md backdrop-blur-md px-6 py-8 rounded-md border  border-white/30 hover:border-white/50 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]'>
             <h1 className='text-white text-2xl font-semibold text-center'>Connect with me</h1>
             <div className='mt-4'>
               <input
