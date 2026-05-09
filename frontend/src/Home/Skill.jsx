@@ -28,7 +28,7 @@ const Skill = () => {
                     <p className='text-gray-300 font-medium text-xl text-center mt-4'>Technologies and tools I use to design, develop, and deploy applications.</p>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10'>
-                    <div className='bg-gray-900 backdrop-blur-md px-6 py-8 rounded-md border border-white/10 hover:border-white/20 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] hover:-translate-y-0.5 duration-200'>
+                    <div className='bg-[radial-gradient(ellipse_at_right_top,#107667ed,#000_47%_100%)] border border-[rgba(1,195,168,0.08)] hover:border-[rgba(110,231,183,0.4)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(1,195,168,0.25)] hover:-translate-y-0.5 transition-all duration-300'>
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>FRONTEND</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
@@ -55,7 +55,7 @@ const Skill = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='bg-gray-900 backdrop-blur-md px-6 py-8 rounded-md border border-white/10 hover:border-white/20 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] hover:-translate-y-0.5 duration-200'>
+                    <div className='bg-[radial-gradient(ellipse_at_right_top,#7c3aedcc,#000_47%_100%)] border border-[rgba(168,85,247,0.12)] hover:border-[rgba(196,181,253,0.45)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(168,85,247,0.3)] hover:-translate-y-0.5 transition-all duration-300'>
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>BACKEND</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
@@ -89,7 +89,7 @@ const Skill = () => {
                             </div>
                         </div>
                     </div> */}
-                    <div className='bg-gray-900 backdrop-blur-md px-6 py-8 rounded-md border border-white/10 hover:border-white/20 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] hover:-translate-y-0.5 duration-200'>
+                    <div className='bg-[radial-gradient(ellipse_at_right_top,#1e3a8acc,#000_57%_100%)] border border-[rgba(59,130,246,0.12)] hover:border-[rgba(147,197,253,0.45)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all duration-300'>
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>TOOLS</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
