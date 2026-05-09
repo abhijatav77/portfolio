@@ -32,23 +32,23 @@ const Skill = () => {
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>FRONTEND</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={html} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>HTML</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={css} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>CSS</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={js} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>JavaScript</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={react} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>React JS</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={tailwind} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Tailwind CSS</p>
                                 </div>
@@ -59,15 +59,15 @@ const Skill = () => {
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>BACKEND</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={node} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Node JS</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={express} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Express JS</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={mongo} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Mongo DB</p>
                                 </div>                                
@@ -78,11 +78,11 @@ const Skill = () => {
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>LANGUAGES</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={c} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>C</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={cpp} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>C++</p>
                                 </div>
@@ -93,27 +93,27 @@ const Skill = () => {
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>TOOLS</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={git} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Git</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={github} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>GitHUb</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={vs} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>VS Code</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={postman} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Postman</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={compass} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Compass</p>
                                 </div>
-                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition'>
+                                <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={vercel} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Vercel</p>
                                 </div>
