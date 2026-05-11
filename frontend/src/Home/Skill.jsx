@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import html from '../assets/html.png'
 import css from '../assets/css.png'
 import js from '../assets/js.png'
@@ -15,20 +15,33 @@ import vs from '../assets/vs.png'
 import postman from '../assets/postman.png'
 import compass from '../assets/compass.png'
 import vercel from '../assets/vercel.png'
+import AOS from "aos"
+import 'aos/dist/aos.css'
 
 const Skill = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+        })
+        AOS.refresh()
+    }, [])
+
     return (
-        <div>
+        <div className='overflow-hidden'>
             <div className='max-w-7xl mx-auto px-10'>
                 <div className='flex items-center justify-center flex-col'>
-                    <h1 className='text-3xl font-bold text-white'>
+                    <h1  data-aos="fade-right" className='text-3xl font-bold text-white'>
                         SKILLS
                     </h1>
-                    <div className='w-20 h-1 bg-purple-700 mt-2'></div>
-                    <p className='text-gray-300 font-medium text-xl text-center mt-4'>Technologies and tools I use to design, develop, and deploy applications.</p>
+                    <div  data-aos="zoom-in-out" className='w-20 h-1 bg-purple-700 mt-2'></div>
+                    <p  data-aos="fade-left" className='text-gray-300 font-medium text-xl text-center mt-4'>Technologies and tools I use to design, develop, and deploy applications.</p>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10'>
-                    <div className='bg-[radial-gradient(ellipse_at_right_top,#107667ed,#000_47%_100%)] border border-[rgba(1,195,168,0.08)] hover:border-[rgba(110,231,183,0.4)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(1,195,168,0.25)] hover:-translate-y-0.5 transition-all duration-300'>
+                    <div data-aos="zoom-in-up" className='bg-[radial-gradient(ellipse_at_right_top,#107667ed,#000_47%_100%)] border border-[rgba(1,195,168,0.08)] hover:border-[rgba(110,231,183,0.4)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(1,195,168,0.25)] hover:-translate-y-0.5 transition-all duration-300'>
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>FRONTEND</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
@@ -55,7 +68,7 @@ const Skill = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='bg-[radial-gradient(ellipse_at_right_top,#7c3aedcc,#000_47%_100%)] border border-[rgba(168,85,247,0.12)] hover:border-[rgba(196,181,253,0.45)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(168,85,247,0.3)] hover:-translate-y-0.5 transition-all duration-300'>
+                    <div data-aos="zoom-in-up" className='bg-[radial-gradient(ellipse_at_right_top,#7c3aedcc,#000_47%_100%)] border border-[rgba(168,85,247,0.12)] hover:border-[rgba(196,181,253,0.45)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(168,85,247,0.3)] hover:-translate-y-0.5 transition-all duration-300'>
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>BACKEND</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
@@ -70,7 +83,7 @@ const Skill = () => {
                                 <div className='flex items-center border border-gray-700 rounded-full gap-2 px-4 py-2 text-center hover:border-[#8245ec] transition hover:-translate-y-0.5'>
                                     <img src={mongo} alt="html logo" className='w-6 h-6' />
                                     <p className='text-sm text-gray-300'>Mongo DB</p>
-                                </div>                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,7 +102,7 @@ const Skill = () => {
                             </div>
                         </div>
                     </div> */}
-                    <div className='bg-[radial-gradient(ellipse_at_right_top,#1e3a8acc,#000_57%_100%)] border border-[rgba(59,130,246,0.12)] hover:border-[rgba(147,197,253,0.45)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all duration-300'>
+                    <div data-aos="zoom-in-up" className='bg-[radial-gradient(ellipse_at_right_top,#1e3a8acc,#000_57%_100%)] border border-[rgba(59,130,246,0.12)] hover:border-[rgba(147,197,253,0.45)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all duration-300'>
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>TOOLS</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>

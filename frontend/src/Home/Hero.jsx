@@ -2,22 +2,35 @@ import cv from '../assets/cv.pdf'
 import abhi from '../assets/abhi.jpeg'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthProvider'
+import AOS from "aos"
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
   const { isAuthenticated } = useAuth()
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+    })
+    AOS.refresh()
+  }, [])
   return (
-    <div className='min-h-screen flex justify-center items-center'>
+    <div className='min-h-screen flex justify-center items-center overflow-hidden'>
       <div className='max-w-7xl mx-auto'>
         <div className='flex flex-col-reverse md:flex-row items-center justify-center gap-5 w-full'>
           <div className='p-10 md:w-[70%] w-full text-center md:text-start'>
-            <h1 className='text-white text-5xl font-bold'>
+            <h1 data-aos="fade-right" className='text-white text-5xl font-bold'>
               Hi, I am <br />Abhi Jatav
             </h1>
-            <p className='text-gray-300 mt-5 text-xl'>
+            <p data-aos="fade-left" className='text-gray-300 mt-5 text-xl'>
               I am a MERN stack developer currently pursuing a BCA, with experience building full-stack applications like a portfolio website and blog platform. I specialize in creating responsive user interfaces and efficient backend systems using modern web technologies.
             </p>
             <div className='flex sm:justify-start justify-center items-center gap-3'>
-              <div className='mt-5 md:w-fit text-white bg-linear-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold text-xl shadow-md hover:scale-[1.03] duration-300 hover:bg-linear-to-r hover:from-indigo-700 hover:to-purple-700' >
+              <div data-aos="fade-up" className='mt-5 md:w-fit text-white bg-linear-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold text-xl shadow-md hover:scale-[1.03] duration-300 hover:bg-linear-to-r hover:from-indigo-700 hover:to-purple-700' >
                 <a
                   href={cv}
                   target='_blank'
@@ -26,13 +39,23 @@ const Hero = () => {
                 </a>
               </div>
               {isAuthenticated && (
-                <Link to={"/project/show"} className='mt-5 md:w-fit text-white bg-linear-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold text-xl shadow-md hover:scale-[1.03] duration-300 hover:bg-linear-to-r hover:from-indigo-700 hover:to-purple-700'>
+                <Link data-aos="fade-up" to={"/project/show"} className='mt-5 md:w-fit text-white bg-linear-to-r from-indigo-600 to-purple-600 px-4 py-2 rounded-lg font-semibold text-xl shadow-md hover:scale-[1.03] duration-300 hover:bg-linear-to-r hover:from-indigo-700 hover:to-purple-700'>
                   Dashboard
                 </Link>
               )}
             </div>
           </div>
-          <div className='md:w-[40%] w-full flex justify-center mt-20'>
+          <motion.div
+            animate={{
+              x:[0, -15, 0],
+              y:[0, -15, 0]
+             }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: 'linear'
+            }}
+            className='md:w-[40%] w-full flex justify-center mt-20'>
             <div className='relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden'>
               <div
                 className='absolute inset-0 border-4 border-dashed border-white rounded-full animate-spin'
@@ -42,15 +65,15 @@ const Hero = () => {
                 className='absolute inset-2 border-2 border-dashed border-white rounded-full animate-spin'
                 style={{ animationDuration: "40s", willChange: "transform" }}
               ></div>
-              <div className='absolute inset-4 border-4 rounded-full border-purple-600 overflow-hidden'>
+              <motion.div whileHover={{scale: 1.02}} transition={{duration:0.2}} className='absolute inset-4 border-4 rounded-full border-purple-600 overflow-hidden cursor-pointer'>
                 <img
                   src={abhi}
                   alt=""
                   className='w-full h-full object-cover object-center rounded-full'
                 />
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
 import axios from "axios"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
 import { BACKEND_URL } from "../utils/Utils"
+import AOS from "aos"
+import 'aos/dist/aos.css'
 
 const Contact = () => {
   const [name, setName] = useState("")
@@ -23,18 +25,28 @@ const Contact = () => {
       toast.error(error?.response?.data?.message || "Something went wrong")
     }
   }
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: false,
+        mirror: true,
+      })
+      AOS.refresh()
+    }, [])
   return (
-    <div>
-      <div className='max-w-7xl mx-auto px-10 mt-20'>
+    <div className="overflow-hidden">
+      <div className='max-w-7xl mx-auto px-10'>
         <div className='flex items-center justify-center flex-col'>
-          <h1 className='text-3xl font-bold text-white'>
+          <h1 data-aos="fade-right" className='text-3xl font-bold text-white'>
             CONTACT
           </h1>
-          <div className='w-20 h-1 bg-purple-600 mt-2'></div>
-          <p className='text-gray-300 font-medium text-xl text-center mt-4'>Have a question or want to work together? Drop me a message!</p>
+          <div data-aos="zoom-in-out" className='w-20 h-1 bg-purple-600 mt-2'></div>
+          <p data-aos="fade-left" className='text-gray-300 font-medium text-xl text-center mt-4'>Have a question or want to work together? Drop me a message!</p>
         </div>
         <div className='flex items-center justify-center mt-10'>
-          <form onSubmit={handleForm} className='bg-gray-900 w-full max-w-md backdrop-blur-md px-6 py-8 rounded-md border  border-white/30 hover:border-white/50 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]'>
+          <form  data-aos="zoom-in-up" onSubmit={handleForm} className='bg-gray-900 w-full max-w-md backdrop-blur-md px-6 py-8 rounded-md border  border-white/30 hover:border-white/50 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]'>
             <h1 className='text-white text-2xl font-semibold text-center'>Connect with me</h1>
             <div className='mt-4'>
               <input

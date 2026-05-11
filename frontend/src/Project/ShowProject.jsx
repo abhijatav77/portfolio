@@ -58,12 +58,12 @@ const ShowProject = () => {
                             <div key={element._id} to={'https://blog-app-major.vercel.app'}
                                 className='bg-gray-900 border border-white/20 shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] rounded-md hover:-translate-y-1.5 duration-100'
                             >
-                                <div>
+                                <div className='p-5'>
                                     <img
                                         src={element.projectImage.url} alt=""
-                                        className='w-full rounded-t-md'
+                                        className='w-full rounded-md h-50'
                                     />
-                                    <div className='px-4 mt-2'>
+                                    <div className='mt-2'>
                                         <h1 className='text-white font-bold text-2xl'>{element.title}</h1>
                                         {/* <p className='text-gray-300 mt-1'>{element.description}</p> */}
                                     </div>
@@ -74,10 +74,10 @@ const ShowProject = () => {
                                     </div> */}
                                 </div>
                                 <div className='flex justify-between p-4'>
-                                    <Link to={`/project/update/${element._id}`} className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 duration-300'>
+                                    <Link to={`/project/update/${element._id}`} className='bg-blue-500 text-white px-5 py-2 rounded-md hover:bg-blue-600 duration-300'>
                                         Update
                                     </Link>
-                                    <button onClick={() => handleDelete(element._id)} className='bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 duration-300'>
+                                    <button onClick={() => handleDelete(element._id)} className='bg-red-500 text-white px-5 py-2 rounded-md hover:bg-red-600 duration-300'>
                                         Delete
                                     </button>
                                 </div>
