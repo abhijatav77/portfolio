@@ -34,14 +34,17 @@ const Skill = () => {
         <div className='overflow-hidden'>
             <div className='max-w-7xl mx-auto px-10'>
                 <div className='flex items-center justify-center flex-col'>
-                    <h1  data-aos="fade-right" className='text-3xl font-bold text-white'>
+                    <h1 data-aos="fade-right" className='text-3xl font-bold text-white'>
                         SKILLS
                     </h1>
-                    <div  data-aos="zoom-in-out" className='w-20 h-1 bg-purple-700 mt-2'></div>
-                    <p  data-aos="fade-left" className='text-gray-300 font-medium text-xl text-center mt-4'>Technologies and tools I use to design, develop, and deploy applications.</p>
+                    <div data-aos="zoom-in-out" className='w-20 h-1 bg-purple-700 mt-2'></div>
+                    <p data-aos="fade-left" className='text-gray-300 font-medium text-xl text-center mt-4'>Technologies and tools I use to design, develop, and deploy applications.</p>
                 </div>
                 <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10'>
-                    <div data-aos="zoom-in-up" className='bg-[radial-gradient(ellipse_at_right_top,#107667ed,#000_47%_100%)] border border-[rgba(1,195,168,0.08)] hover:border-[rgba(110,231,183,0.4)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(1,195,168,0.25)] hover:-translate-y-0.5 transition-all duration-300'>
+                    <div
+                        data-aos="zoom-in-up"
+                        className='bg-[radial-gradient(ellipse_at_right_top,#2563eb,#000_47%_100%)] border border-[rgba(59,130,246,0.4)] hover:border-[rgba(96,165,250,0.5)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(59,130,246,0.35)] hover:-translate-y-0.5 transition-all duration-300'
+                    >
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>FRONTEND</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
@@ -68,7 +71,10 @@ const Skill = () => {
                             </div>
                         </div>
                     </div>
-                    <div data-aos="zoom-in-up" className='bg-[radial-gradient(ellipse_at_right_top,#7c3aedcc,#000_47%_100%)] border border-[rgba(168,85,247,0.12)] hover:border-[rgba(196,181,253,0.45)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(168,85,247,0.3)] hover:-translate-y-0.5 transition-all duration-300'>
+                    <div
+                        data-aos="zoom-in-up"
+                        className='bg-[radial-gradient(ellipse_at_right_top,#d946efcc,#000_47%_100%)] border border-[rgba(232,121,249,0.35)] hover:border-[rgba(250,232,255,0.6)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_25px_rgba(217,70,239,0.35)] hover:-translate-y-1 transition-all duration-300'
+                    >
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>BACKEND</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>
@@ -102,7 +108,10 @@ const Skill = () => {
                             </div>
                         </div>
                     </div> */}
-                    <div data-aos="zoom-in-up" className='bg-[radial-gradient(ellipse_at_right_top,#1e3a8acc,#000_57%_100%)] border border-[rgba(59,130,246,0.12)] hover:border-[rgba(147,197,253,0.45)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(59,130,246,0.3)] hover:-translate-y-0.5 transition-all duration-300'>
+                    <div
+                        data-aos="zoom-in-up"
+                        className='bg-[radial-gradient(ellipse_at_right_top,#7c3aedcc,#000_47%_100%)] border border-[rgba(167,139,250,0.45)] hover:border-[rgba(196,181,253,0.6)] backdrop-blur-md px-6 py-8 rounded-md hover:shadow-[0_0_20px_1px_rgba(124,58,237,0.35)] hover:-translate-y-0.5 transition-all duration-300'
+                    >
                         <h2 className='text-2xl font-semibold text-gray-400 mb-6 text-center'>TOOLS</h2>
                         <div>
                             <div className='flex flex-wrap justify-center gap-3'>

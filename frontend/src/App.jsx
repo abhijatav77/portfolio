@@ -11,12 +11,14 @@ import Login from './pages/Login'
 import axios from 'axios'
 import { BACKEND_URL } from './utils/Utils'
 import { useAuth } from './context/AuthProvider'
+import CustomCursor from './navigation/CustomCursor'
 
 const App = () => {
   const { isAuthenticated, loading } = useAuth()
   return (
-    <div className='bg-[#050414]'>
+    <div className='relative gradient text-white'>
       <Navbar />
+      <CustomCursor />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/project/login' element={isAuthenticated ? <Dashboard /> : <Login />} />

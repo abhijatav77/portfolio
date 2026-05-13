@@ -4,6 +4,7 @@ import toast from "react-hot-toast"
 import { BACKEND_URL } from "../utils/Utils"
 import AOS from "aos"
 import 'aos/dist/aos.css'
+import ParticlesBackground from "../navigation/ParticlesBackground"
 
 const Contact = () => {
   const [name, setName] = useState("")
@@ -36,7 +37,8 @@ const Contact = () => {
       AOS.refresh()
     }, [])
   return (
-    <div className="overflow-hidden">
+    <div className='min-h-screen relative flex justify-center items-center overflow-hidden '>
+      <ParticlesBackground />
       <div className='max-w-7xl mx-auto px-10'>
         <div className='flex items-center justify-center flex-col'>
           <h1 data-aos="fade-right" className='text-3xl font-bold text-white'>
